@@ -2,19 +2,32 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Fullscreen Gambar</title>
+  <title>Gambar QR Fullscreen</title>
   <style>
     html, body {
-      margin: 0; padding: 0; height: 100%;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-color: black;
     }
     img {
-      width: 100vw; height: 100vh;
+      width: 100vw;
+      height: 100vh;
       object-fit: cover;
       display: block;
     }
   </style>
+  <script>
+    // Tambahkan versi acak pada URL gambar untuk mencegah cache
+    const randomVersion = Math.floor(Math.random() * 100000);
+    document.addEventListener("DOMContentLoaded", () => {
+      const img = document.createElement("img");
+      img.src = `hudil.jpg?v=${randomVersion}`;
+      img.alt = "Gambar QR";
+      document.body.appendChild(img);
+    });
+  </script>
 </head>
 <body>
-  <img src="hudil.jpg?v=1" alt="Gambar QR" />
 </body>
 </html>
