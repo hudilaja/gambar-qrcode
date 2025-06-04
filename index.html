@@ -2,22 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Gambar QR</title>
+  <title>Full Page Gambar</title>
   <style>
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+    html, body {
       margin: 0;
+      padding: 0;
+      height: 100%;
     }
     img {
-      max-width: 90%;
-      max-height: 90vh;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover; /* atau: contain */
+      display: block;
     }
   </style>
 </head>
 <body>
-  <img src="hudil.jpg" alt="Gambar dari QR">
+  <img src="gambar.jpg" alt="Full Page Gambar">
 </body>
 </html>
