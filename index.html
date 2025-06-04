@@ -2,27 +2,32 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Gambar QR Fullscreen</title>
+  <title>Gambar Tampilan QR</title>
   <style>
     html, body {
       margin: 0;
       padding: 0;
       height: 100%;
       background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     img {
-      width: 100vw;
-      height: 100vh;
-      object-fit: cover;
-      display: block;
+      max-width: 90vw;
+      max-height: 90vh;
+      width: auto;
+      height: auto;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      border-radius: 12px;
     }
   </style>
   <script>
-    // Tambahkan versi acak pada URL gambar untuk mencegah cache
-    const randomVersion = Math.floor(Math.random() * 100000);
+    // Tambah versi acak biar cache hilang
+    const cacheBuster = Math.floor(Math.random() * 100000);
     document.addEventListener("DOMContentLoaded", () => {
       const img = document.createElement("img");
-      img.src = `hudil.jpg?v=${randomVersion}`;
+      img.src = `gambar.jpg?v=${cacheBuster}`;
       img.alt = "Gambar QR";
       document.body.appendChild(img);
     });
